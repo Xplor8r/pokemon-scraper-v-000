@@ -20,7 +20,7 @@ class Pokemon
       :name => pokemon_name = db.execute("SELECT pokemon.name FROM pokemon WHERE id = #{id}").flatten[0]
       :type => pokemon_type = db.execute("SELECT pokemon.type FROM pokemon WHERE id = #{id}").flatten[0]
       :db => db
-    
+    }
     self.new(pokemon)
   end
 end
